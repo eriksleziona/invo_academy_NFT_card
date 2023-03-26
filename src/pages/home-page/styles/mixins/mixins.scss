@@ -11,13 +11,13 @@
 }
 
 @mixin border-radius-top {
-    border-top-right-radius:  28px;
-    border-top-left-radius:  28px;
+    border-top-right-radius:  var(--border-radius);
+    border-top-left-radius: var(--border-radius);
 }
 
 @mixin border-radius-bottom {
-    border-bottom-right-radius:  28px;
-    border-bottom-left-radius:  28px;
+    border-bottom-right-radius:  var(--border-radius);
+    border-bottom-left-radius:  var(--border-radius);
 }
 @mixin row-direction {
     display: flex;
