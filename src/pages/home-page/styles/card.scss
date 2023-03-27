@@ -111,4 +111,14 @@
             font-size: 14px;
         }
     }
+    @media (max-width: 575px) {
+        padding: 163px 16px;
+        & &__text-title {
+            margin-right: 12px;
+            margin-left: 12px;
+        }
+        & &__text-desc{
+            margin: 0 12px;
+        }
+    }
 }
