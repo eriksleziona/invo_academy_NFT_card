@@ -25,6 +25,14 @@
     align-items: center;
 }
 
+@mixin title-font {
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-weight: 600;
+    color: var(--color-title);
+}
+
 @mixin body-fonts {
     font-size: 18px;
     line-height: 160%;

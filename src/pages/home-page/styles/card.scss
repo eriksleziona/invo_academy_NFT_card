@@ -32,12 +32,9 @@
     }
     & &__text-title {
         @include sentence-shorten(24px);
+        @include title-font;
         margin: 0 103PX 25px 32px;
-        font-size: 24px;
-        line-height: 100%;
-        letter-spacing: 0;
-        font-weight: 600;
-        color: var(--color-title);
+  
     }
 
     & &__text-desc {
@@ -113,6 +110,8 @@
     }
     @media (max-width: 575px) {
         padding: 163px 16px;
+    }
+    @media (max-width: 374px){
         & &__text-title {
             margin-right: 12px;
             margin-left: 12px;
