@@ -9,7 +9,7 @@
     & &__upper {
         @include border-radius-top;
         max-width: 413px;
-        min-height: 399px;
+        height: 399px;
         background-image: url('../../../../public/images/card-img.jpg');
         background-repeat: no-repeat;
         background-position-x: center;
@@ -32,7 +32,7 @@
     }
     & &__text-title {
         @include sentence-shorten(24px);
-        margin: 0 103PX 24px 32px;
+        margin: 0 103PX 25px 32px;
         font-size: 24px;
         line-height: 100%;
         letter-spacing: 0;
@@ -55,7 +55,7 @@
     & &__value-desc {
        margin: 0;
        @include body-fonts;
-        font-weight: 700;
+       font-weight: 700;
     }
     & &__timer {
         @include row-direction;
@@ -63,19 +63,16 @@
         align-items: center;
         gap: 10px;
     }
-
     & &__timer-desc {
         margin: 0;
         @include body-fonts-2;
-        color: var(--color-body);
-        
+        color: var(--color-body);    
     }
     & &__footer {
         padding: 24px 0 24px 32px;
         background-color: var(--color-box);
         @include border-radius-bottom;
     }
-
     & &__created {
         @include row-direction;
         @include size-img-avatar;
@@ -83,5 +80,35 @@
     }
     & &__created-user {
         @include user-fonts;
+    }
+
+    @media (max-width: 992px) {
+        padding-top: 354px;
+        width: 343px;
+        & &__upper {
+            height: 330px;
+        }
+        & &__text-title{
+            margin: 0 106PX 17px 24px;
+        }
+        & &__text-desc {
+            margin: 0px 68px 0px 24px;
+        }
+        & &__wrapper {
+            padding: 26px 0 26px 0;
+            margin: 0 33px 0 24px;
+        }
+        & &__timer-desc {
+            font-size: 14px;
+        }
+        & &__value-desc {
+            font-size: 16px;
+        }
+        & &__footer {
+            padding: 20px 0 20px 24px;
+        }
+        & &__created-user{
+            font-size: 14px;
+        }
     }
 }
