@@ -120,4 +120,10 @@
             margin: 0 12px;
         }
     }
+    @media (max-width:300px) {
+        & &__wrapper {
+            @include column-direction;
+            gap: 15px;
+        }
+    }
 }
