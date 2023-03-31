@@ -1,129 +1,129 @@
-
-@import 'mixins/mixins.scss';
-
+@import "mixins/mixins.scss";
 
 .card-container {
-    padding-top: 127px;
-    width: 413px;
+  padding: 127px 0 127px 0;
+  width: 413px;
+  height: 556px;
 
+  & &__upper {
+    @include border-radius-top;
+    height: 399px;
+    background-image: url("../../../../public/images/card-img.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    display: flex;
+    align-items: flex-end;
+  }
+  & &__lower {
+    background-color: var(--color-box);
+  }
+  & &__wrapper {
+    @include row-direction;
+    padding: 8px 0px 31px 0px;
+    margin: 0 32px;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--color-stroke);
+  }
+  & &__text {
+    padding: 0 32px 32px 32px;
+  }
+  & &__text-title {
+    @include sentence-shorten(24px);
+    @include title-font;
+  }
+
+  & &__text-desc {
+    @include sentence-shorten(28.8px);
+    @include body-fonts;
+    max-width: 278px;
+    color: var(--color-body);
+    margin-top: 26px;
+  }
+
+  & &__value {
+    @include row-direction;
+    @include size-img;
+    padding-top: -2px;
+
+    gap: 10px;
+  }
+  & &__value-desc {
+    margin: 0;
+    @include body-fonts;
+    font-weight: 700;
+  }
+  & &__timer {
+    @include row-direction;
+    @include size-img;
+    align-items: center;
+    gap: 10px;
+  }
+  & &__timer-desc {
+    margin: 0;
+    @include body-fonts-2;
+    color: var(--color-body);
+  }
+  & &__footer {
+    padding: 24px 0 24px 32px;
+    background-color: var(--color-box);
+    @include border-radius-bottom;
+  }
+  & &__created {
+    @include row-direction;
+    @include size-img-avatar;
+    gap: 16px;
+  }
+  & &__created-user {
+    @include user-fonts;
+  }
+
+  @media (max-width: 992px) {
+    padding-top: 354px;
+    width: 343px;
     & &__upper {
-        @include border-radius-top;
-        max-width: 413px;
-        height: 399px;
-        background-image: url('../../../../public/images/card-img.jpg');
-        background-repeat: no-repeat;
-        background-position-x: center;
-        display: flex;
-        align-items: flex-end;   
+      height: 335px;
     }
-    & &__lower {
-        background-color: var(--color-box);
+
+    & &__text {
+      padding: 0 24px;
+    }
+    & &__text-desc {
+      margin-top: 16px;
     }
     & &__wrapper {
-        @include row-direction;
-        padding: 10px 0 30px 0;
-        margin: 0 32px;
-        justify-content: space-between;
-
-        border-bottom: 1px solid var(--color-stroke);
-    }
-    & &__text {
-        width: 100%;
-    }
-    & &__text-title {
-        @include sentence-shorten(24px);
-        @include title-font;
-        margin: 0 103PX 25px 32px;
-  
-    }
-
-    & &__text-desc {
-        @include sentence-shorten(28.8px);
-        @include body-fonts;
-        color: var(--color-body);   
-        margin: 0 103px 32px 32px;
-    }
-
-    & &__value {
-        @include row-direction;
-        @include size-img;
-        gap: 10px;
-    }
-    & &__value-desc {
-       margin: 0;
-       @include body-fonts;
-       font-weight: 700;
-    }
-    & &__timer {
-        @include row-direction;
-        @include size-img;
-        align-items: center;
-        gap: 10px;
+      padding: 24px 0 20px 0;
+      margin: 0 33px 0 24px;
     }
     & &__timer-desc {
-        margin: 0;
-        @include body-fonts-2;
-        color: var(--color-body);    
+      font-size: 14px;
+    }
+    & &__value-desc {
+      font-size: 16px;
     }
     & &__footer {
-        padding: 24px 0 24px 32px;
-        background-color: var(--color-box);
-        @include border-radius-bottom;
-    }
-    & &__created {
-        @include row-direction;
-        @include size-img-avatar;
-        gap: 16px;
+      padding: 20px 0 20px 24px;
     }
     & &__created-user {
-        @include user-fonts;
+      font-size: 14px;
+      font-weight: 500;
     }
-
-    @media (max-width: 992px) {
-        padding-top: 354px;
-        width: 343px;
-        & &__upper {
-            height: 330px;
-        }
-        & &__text-title{
-            margin: 0 106PX 17px 24px;
-        }
-        & &__text-desc {
-            margin: 0px 68px 0px 24px;
-        }
-        & &__wrapper {
-            padding: 26px 0 26px 0;
-            margin: 0 33px 0 24px;
-        }
-        & &__timer-desc {
-            font-size: 14px;
-        }
-        & &__value-desc {
-            font-size: 16px;
-        }
-        & &__footer {
-            padding: 20px 0 20px 24px;
-        }
-        & &__created-user{
-            font-size: 14px;
-        }
+  }
+  @media (max-width: 575px) {
+    padding: 163px 16px;
+  }
+  @media (max-width: 374px) {
+    & &__text {
+      padding: 0;
+      margin: 0 12px;
     }
-    @media (max-width: 575px) {
-        padding: 163px 16px;
+    & &__text-desc {
     }
-    @media (max-width: 374px){
-        & &__text-title {
-            margin-right: 12px;
-            margin-left: 12px;
-        }
-        & &__text-desc{
-            margin: 0 12px;
-        }
+  }
+  @media (max-width: 300px) {
+    & &__wrapper {
+      @include column-direction;
+      gap: 15px;
     }
-    @media (max-width:300px) {
-        & &__wrapper {
-            @include column-direction;
-            gap: 15px;
-        }
-    }
+  }
 }

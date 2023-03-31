@@ -1,77 +1,74 @@
-
 @mixin sentence-shorten($line-h-value) {
-    overflow: hidden;
-    max-height: calc($line-h-value * 3);
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    display: block;
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
+  overflow: hidden;
+  max-height: calc($line-h-value * 3);
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
 }
 
 @mixin border-radius-top {
-    border-top-right-radius:  var(--border-radius);
-    border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
 }
 
 @mixin border-radius-bottom {
-    border-bottom-right-radius:  var(--border-radius);
-    border-bottom-left-radius:  var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
 }
 @mixin row-direction {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 @mixin column-direction {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin title-font {
-    font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0;
-    font-weight: 600;
-    color: var(--color-title);
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: var(--color-title);
 }
 
 @mixin body-fonts {
-    font-size: 18px;
-    line-height: 160%;
-    letter-spacing: -1%;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: -0.001rem;
 }
 
-
 @mixin body-fonts-2 {
-    font-size: 16px;
-    line-height: 160%;
-    letter-spacing: -1%;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: -0.001rem;
 }
 
 @mixin user-fonts {
-    @include body-fonts-2;
-    color: var(--color-body);
-    span {
-        color: var(--color-title);
-    }
+  @include body-fonts-2;
+  color: var(--color-body);
+  span {
+    font-weight: 500;
+    color: var(--color-title);
+  }
 }
 
 @mixin size-img {
-    img {
-        width: 20px;
-        height: 20px;
-    }
-    
+  img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @mixin size-img-avatar {
-    img {
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-    }
-    
+  img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
 }
